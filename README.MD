@@ -198,6 +198,10 @@ Each microservice should allow API Gateway’s requests.
 
 * Backend: Node.js, Express.js
 
+* Language: Javascript
+
+* Architecture: Microservices (Clean Architecture)
+
 * Database: PostgreSQL
 
 * Communication: Axios via API Gateway
