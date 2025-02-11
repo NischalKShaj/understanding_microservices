@@ -180,25 +180,19 @@ Each microservice should allow API Gateway’s requests.
 
 ## 📌 API Endpoints
 
-### Authentication Service (/auth)
+### **Auth Service (/auth)**
 
-```md
---------------------------------------------------------------
-|Method |  End point | Description                                |
---------------------------------------------------------------
-| POST     | /signup      | For user signup                        |
-| POST     | /login         | For user login                          |
-| GET       | /user/:id    | For getting a particular user   |
-```
+| Method | Endpoint     | Description                              |
+|--------|------------|------------------------------------------|
+| POST   | `/signup`   | For user signup                        |
+| POST   | `/login`    | For user login                         |
+| GET    | `/user/:id` | Get user details based on the user ID  |
 
-### File Service (/file)
+### **File Service (/file)**
 
-```md
---------------------------------------------------------------
-|Method |  End point | Description                                |
---------------------------------------------------------------
-| POST     | /upload      | For uploading file                    |
-```
+| Method | Endpoint  | Description          |
+|--------|----------|----------------------|
+| POST   | `/upload` | For uploading a file |
 
 ## 🛠 Tech Stack
 
@@ -212,4 +206,4 @@ Each microservice should allow API Gateway’s requests.
 
 ## 👨‍💻 Contributors
 
-[Nischal K Shaj](http://192.168.2.81:3000/nischal)
+[Nischal K Shaj](https://github.com/NischalKShaj)
