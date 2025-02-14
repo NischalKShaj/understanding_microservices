@@ -9,6 +9,7 @@ This project follows a Microservices Architecture where authentication and file 
 * API Gateway → Centralized entry point for routing requests.
 * Auth Service → Handles user authentication (signup, login, JWT verification).
 * File Service → Manages file uploads, retrievals, and storage.
+* Admin Service → Manages the admin side for the application.
 
 ## 🚀 Project Setup
 
@@ -27,6 +28,7 @@ Each service has its own dependencies. Navigate into each folder and install the
 cd api-gateway && npm install
 cd ../auth-service && npm install
 cd ../file-service && npm install
+cd ../admin && npm install
 ```
 
 ### 3️⃣ Set Up Environment Variables
@@ -44,6 +46,9 @@ AUTH_URL=http://localhost:4001
 
 # file server url
 FILE_URL=http://localhost:4002
+
+# admin server url
+ADMIN_URL=http://localhost:4003
 
 # Main port of the application
 PORT=4000
@@ -89,6 +94,19 @@ FILE_DB_PASSWORD=admin
 FILE_DB_PORT=5432
 ```
 
+Admin Service
+
+```.env
+# main frontend url
+BASE_URL=http://localhost:5173
+
+# Main Gateway URL
+API_GATEWAY_URL=http://localhost:4000
+
+# port for the admin service
+PORT=4003
+```
+
 ## 🛠 Running the Services
 
 Each service needs to be run separately:
@@ -111,6 +129,13 @@ npm run dev
 
 ```bash
 cd file-service
+npm run dev
+```
+
+### 4️⃣ Start Admin Service
+
+```bash
+cd admin
 npm run dev
 ```
 
@@ -180,6 +205,8 @@ Each microservice should allow API Gateway’s requests.
 
 ## 📌 API Endpoints
 
+### Authentication Service (/auth)
+
 ### **Auth Service (/auth)**
 
 | Method | Endpoint     | Description                              |
@@ -193,6 +220,13 @@ Each microservice should allow API Gateway’s requests.
 | Method | Endpoint  | Description          |
 |--------|----------|----------------------|
 | POST   | `/upload` | For uploading a file |
+
+### **Admin Service (/admin)**
+
+| Method | Endpoint     | Description                              |
+|--------|------------|------------------------------------------|
+| GET   | `/users`   | For getting all the users                         |
+| GET   | `/files`    | For getting all the files                         |
 
 ## 🛠 Tech Stack
 
@@ -210,4 +244,4 @@ Each microservice should allow API Gateway’s requests.
 
 ## 👨‍💻 Contributors
 
-[Nischal K Shaj](https://github.com/NischalKShaj)
+[Nischal K Shaj](http://192.168.2.81:3000/nischal)
